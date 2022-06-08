@@ -1,0 +1,46 @@
+$gray: #2c2c2c;
+$dark-gray: #161616;
+$light-gray: #57575788;
+$red: rgb(252, 52, 52);
+$dark-red: rgb(158, 34, 34);
+$blue: rgba(43, 79, 201, 1);
+$dark-blue: rgb(49, 46, 173);
+$big-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+$small-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ ::-webkit-scrollbar {
+    width: 5px;
+    background: transparent;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: $gray;
+    border-radius: 10px;
+}
+
+html,
+body {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
