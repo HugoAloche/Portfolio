@@ -50,12 +50,12 @@ export default {
         to: 'haloche035@gmail.com'
       },
       smtp: {
-        host: 'in-v3.mailjet.com',
+        host: 'smtp-relay.sendinblue.com',
         port: 465,
         secure: true,
         auth: {
-          user: '3d72e3c8bd4ac92c73282fdb4864ab28',
-          pass: 'af1c04a100cde4905f4eea47325e347a'
+          user: 'haloche035@gmail.com',
+          pass: 'yMLdbHE5DTCtPqjO'
         }
       }
     }]
