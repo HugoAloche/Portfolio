@@ -215,7 +215,6 @@ export default {
       await this.$recaptcha.execute('login')
       this.GestionPromesse(
         this.$mail.send({
-          header: 'Access-Control-Allow-Origin: portfolio-hugo.herokuapp.com',
           from: 'haloche035@gmail.com',
           replyTo: this.email,
           subject: this.objet,

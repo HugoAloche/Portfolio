@@ -60,6 +60,9 @@ export default {
       }
     }]
   ],
+  axios: {
+    credentials: false
+  },
   sitemap: {
     hostname: 'https://portfolio-hugo.herokuapp.com',
     exclude: ['/loading', '/mentions']
