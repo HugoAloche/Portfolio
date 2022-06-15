@@ -69,17 +69,9 @@
         <h2 class="title">
           Mes travaux
         </h2>
-        <div class="wrapper wrap">
-          <a href="https://www.flyenterprise.net" target="_blank" rel="noopener noreferrer" title="site internet de la société Fly Enterprise">
-            <img class="link" src="../assets/images/fly-enterprise.png" alt="Logo de la société Fly Enterprise">
-          </a>
-          <a href="https://hugoaloche.github.io/Booki/" target="_blank" rel="noopener noreferrer" title="projet booki">
-            <img class="link" src="../assets/images/booki.png" alt="Logo du projet booki">
-          </a>
-          <a href="https://hugoaloche.github.io/HugoAloche_3_27012022/#restaurants" target="_blank" rel="noopener noreferrer" title="projet booki">
-            <img class="link" src="../assets/images/ohmyfood.png" alt="Logo du projet ohmyfood">
-          </a>
-        </div>
+        <nuxt-link class="anim" to="/travaux" title="Icône pour aller voir les travaux">
+          <img src="../assets/images/travaux.png" alt="travaux">
+        </nuxt-link>
       </section>
       <section id="contactSection">
         <h3 class="title">
