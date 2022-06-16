@@ -47,7 +47,7 @@
         <p class="subtitle">
           projet de formation
         </p>
-        <img src="../../assets/images/logo-piquante.png" alt="logo piquante">
+        <img class="no-contain" src="../../assets/images/logo-piquante.png" alt="logo piquante">
       </section>
       <section id="groupomania" data-aos="fade-left" data-aos-duration="1000" class="travaux">
         <p class="title">

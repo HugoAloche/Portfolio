@@ -14,6 +14,9 @@ a.anim {
     &:hover {
         transform: scale(1.05)
     }
+    img {
+        width: 100%;
+    }
 }
 
 .button {
@@ -293,6 +296,13 @@ section {
             background-color: #D4D3DC;
             background-image: url('../images/pexels-fauxels-3184433.jpg');
         }
+        &:nth-child(even) img:not(.no-contain),
+        &:last-child img {
+            @media screen and (max-width: 640px) {
+                width: 100%;
+                object-fit: contain;
+            } 
+            }
     }
 }
 

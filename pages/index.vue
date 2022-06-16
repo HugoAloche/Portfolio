@@ -165,6 +165,7 @@ export default {
     ]
   },
   async mounted () {
+    this.resize()
     try {
       await this.$recaptcha.init()
     } catch (e) {}
@@ -203,6 +204,22 @@ export default {
     clearTimeout(this.timeout)
   },
   methods: {
+    resize () {
+      window.addEventListener('load', function () {
+        if (this.window.innerWidth < 692) {
+          document.querySelector('.anim img').src = require('@/assets/images/travaux-mobile.png')
+        } else {
+          document.querySelector('.anim img').src = require('@/assets/images/travaux.png')
+        }
+      })
+      window.addEventListener('resize', function () {
+        if (this.window.innerWidth < 692) {
+          document.querySelector('.anim img').src = require('@/assets/images/travaux-mobile.png')
+        } else {
+          document.querySelector('.anim img').src = require('@/assets/images/travaux.png')
+        }
+      })
+    },
     async send () {
       await this.$recaptcha.execute('login')
       this.GestionPromesse(
