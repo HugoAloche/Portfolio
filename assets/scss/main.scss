@@ -237,6 +237,7 @@ form {
         color: rgb(95, 95, 95);
         font-weight: bold;
         letter-spacing: 2px;
+        resize: none;
         &::placeholder {
             font-weight: 400;
         }
@@ -287,6 +288,10 @@ section {
         &#kanap {
             background-color: #E8AABE;
             background-image: url('../images/pexels-rachel-claire-4846087.jpg');
+        }
+        &#opticperformance {
+            background-color: #B67332;
+            background-image: url('../images/pexels-chokniti-khongchum-2280547.jpg');
         }
         &#piquante {
             background-color: #E3CD8B;

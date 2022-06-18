@@ -1,10 +1,6 @@
 /* eslint-disable no-useless-escape */
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  loading: {
-    color: 'blue',
-    height: '5px'
-  },
   head: {
     title: 'Hugo Aloche - Portoflio développeur web full stack',
     htmlAttrs: {

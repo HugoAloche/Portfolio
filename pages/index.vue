@@ -69,9 +69,65 @@
         <h2 class="title">
           Mes travaux
         </h2>
-        <nuxt-link class="anim" to="/travaux" title="Icône pour aller voir les travaux">
-          <img src="../assets/images/travaux.png" alt="travaux">
-        </nuxt-link>
+        <p class="subtitle">
+          Projets professionel
+        </p>
+        <div class="wrapper wrap">
+          <Card
+            id="flyenterprise"
+            title="Fly Enterprise"
+            subtitle="
+              Développeur web <br>
+              2019 à Aujourd'hui"
+            image="logo-fly-enterprise.webp"
+          />
+          <Card
+            id="opticperformance"
+            title="Optic Performance"
+            subtitle="
+              Développeur web <br>
+              2022 à Aujourd'hui"
+            image="logo-optic-performance.png"
+          />
+        </div>
+        <p class="subtitle">
+          Projets de formation
+        </p>
+        <div class="wrapper wrap">
+          <Card
+            id="booki"
+            title="Booki"
+            subtitle="Projet de formation"
+            image="logo-booki.png"
+            set-class="none"
+          />
+          <Card
+            id="kanap"
+            title="Kanap"
+            subtitle="Projet de formation"
+            image="logo-kanap.png"
+            set-class="none"
+          />
+          <Card
+            id="groupomania"
+            title="Groupomania"
+            subtitle="Projet de formation"
+            image="logo-groupomania.png"
+          />
+          <Card
+            id="ohmyfood"
+            title="OhMyFood"
+            subtitle="Projet de formation"
+            image="logo-ohmyfood.png"
+          />
+          <Card
+            id="piquante"
+            title="Piquante"
+            subtitle="Projet de formation"
+            image="logo-piquante.png"
+            set-class="none"
+          />
+        </div>
       </section>
       <section id="contactSection">
         <h3 class="title">
@@ -165,7 +221,6 @@ export default {
     ]
   },
   async mounted () {
-    this.resize()
     try {
       await this.$recaptcha.init()
     } catch (e) {}
@@ -204,22 +259,6 @@ export default {
     clearTimeout(this.timeout)
   },
   methods: {
-    resize () {
-      window.addEventListener('load', function () {
-        if (this.window.innerWidth < 692) {
-          document.querySelector('.anim img').src = require('@/assets/images/travaux-mobile.png')
-        } else {
-          document.querySelector('.anim img').src = require('@/assets/images/travaux.png')
-        }
-      })
-      window.addEventListener('resize', function () {
-        if (this.window.innerWidth < 692) {
-          document.querySelector('.anim img').src = require('@/assets/images/travaux-mobile.png')
-        } else {
-          document.querySelector('.anim img').src = require('@/assets/images/travaux.png')
-        }
-      })
-    },
     async send () {
       await this.$recaptcha.execute('login')
       this.GestionPromesse(
