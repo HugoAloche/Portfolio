@@ -9,7 +9,7 @@
         <img
           :class="classImg"
           :src="require(`@/assets/images/${image}`)"
-          alt=""
+          :alt="alt"
         >
         <p v-html="subtitle" />
         <a
