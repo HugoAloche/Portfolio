@@ -69,64 +69,81 @@
         <h2 class="title">
           Mes travaux
         </h2>
-        <p class="subtitle">
-          Projets professionel
-        </p>
-        <div class="wrapper wrap">
-          <Card
-            id="flyenterprise"
-            title="Fly Enterprise"
-            subtitle="
+        <div class="wrapper between">
+          <div class="half">
+            <p class="subtitle">
+              Projets professionel
+            </p>
+            <div class="wrapper wrap">
+              <Card
+                id="flyenterprise"
+                type="pro"
+                title="Fly Enterprise"
+                subtitle="
               Développeur web <br>
               2019 à Aujourd'hui"
-            image="logo-fly-enterprise.webp"
-          />
-          <Card
-            id="opticperformance"
-            title="Optic Performance"
-            subtitle="
+                image="logo-fly-enterprise.webp"
+                @click="modal('flyenterprise')"
+              />
+              <Card
+                id="opticperformance"
+                type="pro"
+                title="Optic Performance"
+                subtitle="
               Développeur web <br>
               2022 à Aujourd'hui"
-            image="logo-optic-performance.png"
-          />
-        </div>
-        <p class="subtitle">
-          Projets de formation
-        </p>
-        <div class="wrapper wrap">
-          <Card
-            id="booki"
-            title="Booki"
-            subtitle="Projet de formation"
-            image="logo-booki.png"
-            set-class="none"
-          />
-          <Card
-            id="kanap"
-            title="Kanap"
-            subtitle="Projet de formation"
-            image="logo-kanap.png"
-            set-class="none"
-          />
-          <Card
-            id="groupomania"
-            title="Groupomania"
-            subtitle="Projet de formation"
-            image="logo-groupomania.png"
-          />
-          <Card
-            id="ohmyfood"
-            title="OhMyFood"
-            subtitle="Projet de formation"
-            image="logo-ohmyfood.png"
-          />
-          <Card
-            id="piquante"
-            title="Piquante"
-            subtitle="Projet de formation"
-            image="logo-piquante.png"
-            set-class="none"
-          />
+                image="logo-optic-performance.png"
+                @click="modal(id)"
+              />
+            </div>
+          </div>
+          <div class="half">
+            <p class="subtitle">
+              Projets d'études
+            </p>
+            <div class="wrapper wrap">
+              <Card
+                id="booki"
+                type="school"
+                title="Booki"
+                subtitle="Projet de formation"
+                image="logo-booki.png"
+                @click="modal(id)"
+              />
+              <Card
+                id="kanap"
+                type="school"
+                title="Kanap"
+                subtitle="Projet de formation"
+                image="logo-kanap.png"
+                @click="modal(id)"
+              />
+              <Card
+                id="groupomania"
+                type="school"
+                title="Groupomania"
+                subtitle="Projet de formation"
+                image="logo-groupomania.png"
+                @click="modal(id)"
+              />
+              <Card
+                id="ohmyfood"
+                type="school"
+                title="OhMyFood"
+                subtitle="Projet de formation"
+                image="logo-ohmyfood.png"
+                @click="modal(id)"
+              />
+              <Card
+                id="piquante"
+                type="school"
+                title="Piquante"
+                subtitle="Projet de formation"
+                image="logo-piquante.png"
+                @click="modal(id)"
+              />
+            </div>
+          </div>
         </div>
       </section>
       <section id="contactSection">
@@ -216,7 +233,8 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Portfolio d\'Hugo Aloche développeur fullstack passionnée par le développement d\'applications web prêt à réaliser tous les défis!'
+        content:
+          "Portfolio d'Hugo Aloche développeur fullstack passionnée par le développement d'applications web prêt à réaliser tous les défis!"
       }
     ]
   },
@@ -289,7 +307,8 @@ export default {
           })
         }
       )
-    }
+    },
+    modal (id) {}
   }
 }
 </script>

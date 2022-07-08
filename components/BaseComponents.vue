@@ -19,6 +19,15 @@
             title="lien vers github"
           ><i class="devicon-github-original" /></a>
           <a
+            href="https://discord.gg/gseaf2ZfVs"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="lien vers mon serveur discord"
+          ><img
+            src="../assets/images/discord.png"
+            alt="logo discord"
+          ></a>
+          <a
             href="https://www.linkedin.com/in/hugo-aloche/"
             target="_blank"
             rel="noopener noreferrer"
@@ -34,9 +43,8 @@
 if (process.browser) {
   window.axeptioSettings = {
     clientId: '627f7fb5df797dcf02331b77'
-  };
-
-  (function (d, s) {
+  }
+  ;(function (d, s) {
     const t = d.getElementsByTagName(s)[0]
     const e = d.createElement(s)
     e.async = true

@@ -12,15 +12,11 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/assets/scss/main.scss'
-  ],
+  css: ['@/assets/scss/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -37,24 +33,29 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/sitemap',
+  modules: [
+    '@nuxtjs/sitemap',
     '@nuxtjs/axios',
     'vue-toastification/nuxt',
     '@nuxtjs/redirect-module',
-    '@nuxtjs/recaptcha', ['nuxt-mail', {
-      message: {
-        to: 'haloche035@gmail.com'
-      },
-      smtp: {
-        host: 'smtp-relay.sendinblue.com',
-        port: 465,
-        secure: true,
-        auth: {
-          user: 'haloche035@gmail.com',
-          pass: 'yMLdbHE5DTCtPqjO'
+    '@nuxtjs/recaptcha',
+    [
+      'nuxt-mail',
+      {
+        message: {
+          to: 'haloche035@gmail.com'
+        },
+        smtp: {
+          host: 'smtp-relay.sendinblue.com',
+          port: 465,
+          secure: true,
+          auth: {
+            user: 'haloche035@gmail.com',
+            pass: 'yMLdbHE5DTCtPqjO'
+          }
         }
       }
-    }]
+    ]
   ],
   axios: {
     credentials: false
@@ -71,15 +72,17 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     filenames: {
-      img: ({ isDev }) => isDev ? '[path][name].[ext]' : 'img/[name].[ext]'
+      img: ({ isDev }) => (isDev ? '[path][name].[ext]' : 'img/[name].[ext]')
     }
   },
-  redirect: [{
-    from: '(?!^\/$|^\/[?].*$)(.*\/[?](.*)$|.*\/$)',
-    to: (from, req) => {
-      const base = req._parsedUrl.pathname.replace(/\/$/, '')
-      const search = req._parsedUrl.search
-      return base + (search != null ? search : '')
+  redirect: [
+    {
+      from: '(?!^/$|^/[?].*$)(.*/[?](.*)$|.*/$)',
+      to: (from, req) => {
+        const base = req._parsedUrl.pathname.replace(/\/$/, '')
+        const search = req._parsedUrl.search
+        return base + (search != null ? search : '')
+      }
     }
-  }]
+  ]
 }
