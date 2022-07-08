@@ -1,5 +1,25 @@
 <template>
-  <div class="card">
+  <div class="card" @click="showModal(id)">
+    <transition name="fade">
+      <div v-if="modal" class="modal">
+        <p class="title">
+          {{ title }} <br>
+          <br>
+        </p>
+        <img
+          :class="classImg"
+          :src="require(`@/assets/images/${image}`)"
+          alt=""
+        >
+        <p v-html="subtitle" />
+        <a
+          v-if="link !== ''"
+          :href="link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Vsisiter</a>
+      </div>
+    </transition>
     <img
       v-if="type === 'school'"
       :src="require(`@/assets/images/school.svg`)"
@@ -35,11 +55,36 @@ export default {
     type: {
       type: String,
       required: true
+    },
+    link: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    classImg: {
+      type: String,
+      required: false,
+      default: ''
     }
   },
   data () {
     return {
-      alt: this.image.split('.')[0].split('-').join(' ')
+      alt: this.image.split('.')[0].split('-').join(' '),
+      modal: false,
+
+      projet: {
+        title: '',
+        subtitle: '',
+        image: ''
+      }
+    }
+  },
+  methods: {
+    showModal (id) {
+      this.projet.title = this.title
+      this.projet.subtitle = this.subtitle
+      this.projet.image = this.image
+      this.modal = !this.modal
     }
   }
 }
@@ -64,9 +109,6 @@ export default {
   width: 250px;
   height: 200px;
   cursor: pointer;
-  @media screen and (max-width: 1024px) {
-    width: 150px;
-  }
   &::before {
     content: '';
     position: absolute;
@@ -88,6 +130,9 @@ export default {
     @media screen and (max-width: 1024px) {
       width: 48px !important;
     }
+    &.none {
+      width: fit-content !important;
+    }
   }
   p {
     font-size: 24px;
@@ -97,12 +142,40 @@ export default {
     word-break: break-all;
     color: #fff;
   }
+  a {
+    color: rgb(18, 109, 214);
+    font-weight: bold;
+  }
   .none {
     object-fit: none;
     width: fit-content;
   }
   img {
     object-fit: none;
+  }
+}
+.modal {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  overflow: scroll;
+  p {
+    color: $gray;
+    &:not(.title) {
+      font-size: 18px;
+    }
+  }
+  img {
+    width: 100% !important;
+    object-fit: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray;
+    border-radius: 10px;
   }
 }
 </style>

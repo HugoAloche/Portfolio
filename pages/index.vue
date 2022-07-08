@@ -76,24 +76,22 @@
             </p>
             <div class="wrapper wrap">
               <Card
-                id="flyenterprise"
                 type="pro"
                 title="Fly Enterprise"
                 subtitle="
-              Développeur web <br>
+              Développeur web de<br>
               2019 à Aujourd'hui"
                 image="logo-fly-enterprise.webp"
-                @click="modal('flyenterprise')"
+                link="https://flyenterprise.net"
               />
               <Card
-                id="opticperformance"
                 type="pro"
                 title="Optic Performance"
                 subtitle="
-              Développeur web <br>
+              Développeur web de <br>
               2022 à Aujourd'hui"
                 image="logo-optic-performance.png"
-                @click="modal(id)"
+                link="https://www.optic-performance.com"
               />
             </div>
           </div>
@@ -103,44 +101,46 @@
             </p>
             <div class="wrapper wrap">
               <Card
-                id="booki"
                 type="school"
                 title="Booki"
-                subtitle="Projet de formation"
+                subtitle="Projet de formation, intégration de maquette"
                 image="logo-booki.png"
-                @click="modal(id)"
+                link="https://hugoaloche.github.io/Booki/"
+                class-img="none"
               />
               <Card
-                id="kanap"
                 type="school"
                 title="Kanap"
-                subtitle="Projet de formation"
+                subtitle="Projet de formation, site marchand"
                 image="logo-kanap.png"
-                @click="modal(id)"
+                class-img="none"
               />
               <Card
-                id="groupomania"
                 type="school"
                 title="Groupomania"
-                subtitle="Projet de formation"
+                subtitle="Projet de formation, création d'un réseaux social"
                 image="logo-groupomania.png"
-                @click="modal(id)"
               />
               <Card
-                id="ohmyfood"
                 type="school"
                 title="OhMyFood"
-                subtitle="Projet de formation"
+                subtitle="Projet de formation, intégration de maquette"
                 image="logo-ohmyfood.png"
-                @click="modal(id)"
+                link="https://hugoaloche.github.io/HugoAloche_3_27012022/"
               />
               <Card
-                id="piquante"
                 type="school"
                 title="Piquante"
-                subtitle="Projet de formation"
+                subtitle="Projet de formation, création d'API Rest"
                 image="logo-piquante.png"
-                @click="modal(id)"
+              />
+              <Card
+                type="school"
+                title="API Discord"
+                subtitle="Projet perso, travailler avec l'API d'un serveur Discord"
+                image="discord.png"
+                link="https://hugoaloche.github.io/Discord-API/"
+                class-img="none"
               />
             </div>
           </div>
@@ -307,8 +307,7 @@ export default {
           })
         }
       )
-    },
-    modal (id) {}
+    }
   }
 }
 </script>
