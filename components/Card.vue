@@ -1,5 +1,5 @@
 <template>
-  <div class="card" @click="showModal(id)">
+  <div class="card" @click="showModal">
     <transition name="fade">
       <div v-if="modal" class="modal">
         <p class="title">
@@ -36,10 +36,6 @@
 export default {
   name: 'CardComponents',
   props: {
-    id: {
-      type: String,
-      required: true
-    },
     title: {
       type: String,
       required: true
@@ -80,7 +76,7 @@ export default {
     }
   },
   methods: {
-    showModal (id) {
+    showModal () {
       this.projet.title = this.title
       this.projet.subtitle = this.subtitle
       this.projet.image = this.image

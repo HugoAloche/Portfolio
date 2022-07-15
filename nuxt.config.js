@@ -46,12 +46,12 @@ export default {
           to: 'haloche035@gmail.com'
         },
         smtp: {
-          host: 'smtp-relay.sendinblue.com',
+          host: 'smtp.gmail.com',
           port: 465,
           secure: true,
           auth: {
-            user: 'haloche035@gmail.com',
-            pass: 'yMLdbHE5DTCtPqjO'
+            user: 'h.aloche@optic-performance.com',
+            pass: '7wOtn2Awiq2;;NbK]rS?'
           }
         }
       }
