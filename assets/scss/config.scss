@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'Garamond-Title';
-  src: url('/assets/fonts/Garamond/EBGaramond-ExtraBold.ttf');
+  src: url('@/assets/fonts/Garamond/EBGaramond-ExtraBold.ttf');
 }
 @font-face {
   font-family: 'Garamond-Subtitle';
-  src: url('/assets/fonts/Garamond/EBGaramond-SemiBold.ttf');
+  src: url('@/assets/fonts/Garamond/EBGaramond-SemiBold.ttf');
 }
 @font-face {
   font-family: 'Garamond-normal';
-  src: url('/assets/fonts/Garamond/EBGaramond-Regular.ttf');
+  src: url('@/assets/fonts/Garamond/EBGaramond-Regular.ttf');
 }
 $gray: #2c2c2c;
 $dark-gray: #161616;
