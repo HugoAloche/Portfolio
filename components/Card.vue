@@ -20,12 +20,12 @@
         >Vsisiter</a>
       </div>
     </transition>
-    <img
-      v-if="type === 'school'"
-      :src="require(`@/assets/images/school.svg`)"
-      :alt="alt"
-    >
-    <img v-else :src="require(`@/assets/images/work.svg`)" :alt="alt">
+    <p v-if="type === 'school'" class="icon">
+      🏫
+    </p>
+    <p v-else class="icon">
+      🏢
+    </p>
     <p>
       {{ title }}
     </p>
@@ -119,6 +119,10 @@ export default {
   }
   &:hover:before {
     left: 0;
+  }
+  .icon {
+    font-size: 64px;
+    width: fit-content;
   }
   img {
     width: 64px;

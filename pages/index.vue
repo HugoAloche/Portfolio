@@ -6,7 +6,7 @@
           <div class="content">
             <img
               id="logo"
-              src="../assets/images/logo.png"
+              src="../assets/images/logo.webp"
               alt="Logo du portoflio de Hugo Aloche"
             >
             <div>
@@ -68,6 +68,7 @@
       <section>
         <h2 class="title">
           Mes travaux
+          <span class="emoji">💻</span>
         </h2>
         <div class="wrapper between">
           <div class="half">
@@ -90,7 +91,7 @@
                 subtitle="
               Développeur web de <br>
               2022 à Aujourd'hui"
-                image="logo-optic-performance.png"
+                image="logo-optic-performance.webp"
                 link="https://www.optic-performance.com"
               />
             </div>
@@ -104,7 +105,7 @@
                 type="school"
                 title="Booki"
                 subtitle="Projet de formation, intégration de maquette"
-                image="logo-booki.png"
+                image="logo-booki.webp"
                 link="https://hugoaloche.github.io/Booki/"
                 class-img="none"
               />
@@ -112,33 +113,33 @@
                 type="school"
                 title="Kanap"
                 subtitle="Projet de formation, site marchand"
-                image="logo-kanap.png"
+                image="logo-kanap.webp"
                 class-img="none"
               />
               <Card
                 type="school"
                 title="Groupomania"
                 subtitle="Projet de formation, création d'un réseaux social"
-                image="logo-groupomania.png"
+                image="logo-groupomania.webp"
               />
               <Card
                 type="school"
                 title="OhMyFood"
                 subtitle="Projet de formation, intégration de maquette"
-                image="logo-ohmyfood.png"
+                image="logo-ohmyfood.webp"
                 link="https://hugoaloche.github.io/HugoAloche_3_27012022/"
               />
               <Card
                 type="school"
                 title="Piquante"
                 subtitle="Projet de formation, création d'API Rest"
-                image="logo-piquante.png"
+                image="logo-piquante.webp"
               />
               <Card
                 type="school"
                 title="API Discord"
                 subtitle="Projet perso, travailler avec l'API d'un serveur Discord"
-                image="discord.png"
+                image="discord.webp"
                 link="https://hugoaloche.github.io/Discord-API/"
                 class-img="none"
               />
@@ -149,6 +150,7 @@
       <section id="contactSection">
         <h3 class="title">
           Me contacter
+          <span class="emoji">📧</span>
         </h3>
         <div class="wrapper">
           <img

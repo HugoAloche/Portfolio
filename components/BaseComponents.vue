@@ -24,7 +24,7 @@
             rel="noopener noreferrer"
             title="lien vers mon serveur discord"
           ><img
-            src="../assets/images/discord.png"
+            src="../assets/images/discord.webp"
             alt="logo discord"
           ></a>
           <a
