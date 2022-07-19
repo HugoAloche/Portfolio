@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="animation" />
     <main>
       <slot name="main" />
     </main>
@@ -77,6 +78,7 @@ export default {
     }
   },
   beforeMount () {
+    document.addEventListener('scroll', this.handleScroll)
     function loadGoogleAnalyticsTag () {
       window.dataLayer = window.dataLayer || []
       function gtag () {
@@ -100,6 +102,76 @@ export default {
         }
       })
     })
+  },
+  methods: {
+    handleScroll () {
+      if (window.scrollY > 500) {
+        document.querySelector('.animation').style.zIndex = '-1'
+      } else {
+        document.querySelector('.animation').style.zIndex = '0'
+      }
+    }
   }
 }
 </script>
+
+<style lang="scss">
+.animation {
+  position: fixed;
+  height: 150px;
+  width: 150px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -75px;
+  border-radius: 100%;
+  background-color: rgb(255, 255, 255, 0.7);
+  transition: transform 2s ease-in-out, border-radius 2s ease-in-out;
+  animation: squeeze 5s alternate-reverse infinite;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  // z-index: -1;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    left: -50px;
+    height: 250px;
+    width: 250px;
+    background-color: rgb(255, 255, 255, 0.4);
+    animation: border 5s alternate-reverse infinite;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    left: -100px;
+    height: 350px;
+    width: 350px;
+    background-color: rgb(255, 255, 255, 0.2);
+    animation: border 5s alternate-reverse infinite;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}
+@keyframes squeeze {
+  0% {
+    transform: scale(1);
+    border-radius: 100%;
+  }
+  100% {
+    transform: scale(1.2);
+    border-radius: 25% 38% 25% 38%;
+  }
+}
+@keyframes border {
+  0% {
+    border-radius: 100%;
+  }
+  100% {
+    border-radius: 25% 38% 25% 38%;
+  }
+}
+</style>
